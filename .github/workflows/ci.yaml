@@ -35,6 +35,8 @@ jobs:
 
       - name: Restart Application
         run: |
+          pm2 stop scratchpad || true
           pm2 delete scratchpad || true
-          pm2 start npm --name scratchpad -- start
+          cd /home/ec2-user/actions-runner/_work/scratchpad/scratchpad
+          pm2 start npm --name scratchpad -- start --update-env
           pm2 save
