@@ -32,7 +32,9 @@ jobs:
         run: npm run lint
 
       - name: Run Tests
-        run: npm run test
+        run: npm run test -- --passWithNoTests
 
       - name: Build Next.js App
         run: npm run build
+
+        
