@@ -40,3 +40,6 @@ jobs:
           cd /home/ec2-user/actions-runner/_work/scratchpad/scratchpad
           pm2 start npm --name scratchpad -- start --update-env
           pm2 save
+
+
+          
