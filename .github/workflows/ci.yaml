@@ -33,9 +33,6 @@ jobs:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
         run: NODE_OPTIONS="--max-old-space-size=4096" npm run build
 
-      - name: Install PM2
-        run: sudo npm install -g pm2
-
       - name: Restart Application
         run: |
           pm2 delete scratchpad || true
